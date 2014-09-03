@@ -405,7 +405,7 @@ if(isset($_REQUEST['email']) && $_REQUEST['email']!="")
 	}
 	else
 	{
-		$sqlSelect = mysql_query("select email from ba_tbl_user where email = '$email'");
+		$sqlSelect = mysql_query("select email, active from ba_tbl_user where email = '$email'");
 		$numrows = mysql_num_rows($sqlSelect);
 		$rowSelect = mysql_fetch_assoc($sqlSelect);
 		if($numrows==1)
